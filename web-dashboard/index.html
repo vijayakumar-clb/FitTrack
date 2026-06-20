@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack Portal - Privacy First</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans">
+
+    <nav class="border-b border-slate-800 bg-slate-950 p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-emerald-400 tracking-wide">🛡️ FitTrack</h1>
+            <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded-full font-medium">Encrypted Session</span>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-6 md:p-8">
+        <header class="mb-8">
+            <h2 class="text-3xl font-extrabold tracking-tight">Welcome Back, Athlete</h2>
+            <p class="text-slate-400 mt-1">Here is your local, end-to-end encrypted health rundown.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Daily Activity</span>
+                    <span class="text-2xl">🔥</span>
+                </div>
+                <div class="text-4xl font-bold tracking-tight text-white" id="step-count">8,432</div>
+                <p class="text-sm text-emerald-400 font-medium mt-2">🏃‍♂️ 84% of your daily 10k goal</p>
+            </div>
+
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Heart Rate</span>
+                    <span class="text-2xl text-red-500 animate-pulse">❤️</span>
+                </div>
+                <div class="text-4xl font-bold tracking-tight text-white" id="heart-rate">72 <span class="text-lg font-normal text-slate-500">BPM</span></div>
+                <p class="text-sm text-slate-400 mt-2">Resting average: 64 BPM</p>
+            </div>
+
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 shadow-xl">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Sleep Quality</span>
+                    <span class="text-2xl">🌙</span>
+                </div>
+                <div class="text-4xl font-bold tracking-tight text-white" id="sleep-hours">7h 45m</div>
+                <p class="text-sm text-indigo-400 font-medium mt-2">✨ Deep sleep cycle optimal</p>
+            </div>
+
+        </div>
+
+        <section class="mt-8 bg-slate-950 border border-slate-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-slate-200 mb-4 flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-amber-400 animate-ping"></span>
+                Live API Connection Feed
+            </h3>
+            <div id="log-console" class="bg-slate-900 border border-slate-800 rounded-lg p-4 font-mono text-xs text-slate-400 h-24 overflow-y-auto">
+                [SYSTEM] Ready to stream biometric datalogs...
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
