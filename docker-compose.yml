@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # 1. PostgreSQL Database Service
+  postgres:
+    image: postgres:15-alpine
+    container_name: fittrack_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME:-fittrack_db}
+      POSTGRES_USER: ${DB_USER:-fittrack_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secure_password_change_me}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - fittrack_network
+
+  # 2. Redis Caching Service
+  redis:
+    image: redis:7-alpine
+    container_name: fittrack_redis
+    restart: always
+    command: redis-server --requirepass ${REDIS_PASSWORD:-redis_password}
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - fittrack_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  fittrack_network:
+    driver: bridge
