@@ -1,0 +1,10 @@
+{
+  "name": "fittrack-wearable-os",
+  "version": "1.0.0",
+  "description": "Smartwatch Background Sensor Listener for FitTrack",
+  "main": "watch-service.js",
+  "scripts": {
+    "monitor": "node watch-service.js"
+  },
+  "private": true
+}
