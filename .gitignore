@@ -1,0 +1,18 @@
+# Local Secret Files (Never let Git track these!)
+.env
+.env.local
+.env.production
+*.env
+
+# Dependencies and Package Manager Logs
+node_modules/
+/jspm_packages
+.npm
+%.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System Temporary Files
+.DS_Store
+Thumbs.db
