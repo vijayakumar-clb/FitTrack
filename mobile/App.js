@@ -30,7 +30,7 @@ export default function App() {
         <View style={styles.card}>
           <Text style={styles.cardLabel}>TODAY'S STEPS</Text>
           <Text style={styles.cardValue}>8,432</Text>
-          <Text style={styles.cardSub text}>Goal: 10,000 steps</Text>
+          <Text style={styles.cardSubtext}>Goal: 10,000 steps</Text>
         </View>
 
         <View style={styles.card}>
